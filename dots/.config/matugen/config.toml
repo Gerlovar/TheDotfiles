@@ -1,0 +1,9 @@
+[config]
+# Define dónde quieres que matugen guarde los colores generados
+[templates.waybar]
+input_path = '~/dotfiles/dots/.config/matugen/templates/colors-waybar.conf'
+output_path = '~/dotfiles/dots/.config/waybar/colors.css'
+
+[[config.hooks]]
+name = "recargar-waybar"
+command = "killall -SIGUSR2 waybar -c ~/.config/waybar/config.jsonc -s ~/.config/waybar/style.css"
