@@ -4,6 +4,14 @@
 input_path = '~/dotfiles/dots/.config/matugen/templates/colors-waybar.conf'
 output_path = '~/dotfiles/dots/.config/waybar/colors.css'
 
+[templates.wofi]
+input_path = '~/dotfiles/dots/.config/matugen/templates/colors-wofi.conf'
+output_path = '~/dotfiles/dots/.config/wofi/colors.css'
+
+[templates.hyprland]
+input_path = '~/dotfiles/dots/.config/matugen/templates/colors-hyprland.conf'
+output_path = '~/dotfiles/dots/.config/hypr/colors.conf'
+
 [[config.hooks]]
 name = "recargar-waybar"
 command = "killall -SIGUSR2 waybar -c ~/.config/waybar/config.jsonc -s ~/.config/waybar/style.css"
