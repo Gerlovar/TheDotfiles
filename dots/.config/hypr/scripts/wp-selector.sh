@@ -1,7 +1,13 @@
 #!/bin/bash
 
 # Directorio de tus fondos de pantalla
-DIR="$HOME/Pictures/Wallpapers"
+if [ $(date +%H) -ge 18 ] || [ $(date +%H) -lt 6 ]; then
+    # Noche (6 PM a 6 AM)
+    DIR="$HOME/Pictures/Wallpapers/night"
+else
+    # Día (6 AM a 6 PM)
+    DIR="$HOME/Pictures/Wallpapers/day"
+fi
 
 if ! pgrep -x "awww-daemon" > /dev/null; then
     awww-daemon &
